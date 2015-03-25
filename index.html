@@ -7,8 +7,14 @@
 		<link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700,900' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 	</head>
-	<body>
-		<div id="title"></div>
+	<body class="noselect">
+		<div id="title" class="centered">Onomaton</div>
 		<div id="subtitle">all ideas deserve <a style="font-weight:bold;text-decoration:underline;">names</a>.</div>
+		<div id="namezone" class="centered">
+			<input id="firstinput" type="text" placeholder="Name"></input>
+			<div class="button centered" onclick="RandString()">Random String</div>
+			<div class="button centered" onclick="RandSyll()">Random Name</div>
+		</div>
 	</body>
+	<script src="sources/synth.js"></script>
 </html>

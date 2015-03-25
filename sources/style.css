@@ -1,2 +1,59 @@
-body{background:url(bg1.png) #111;color:#eee;text-align:center;font-family: 'Vollkorn', Arial;}
-#title{width:500px;margin:0% 50%;transform:translate(-50%, 0%);height:100px;background:url(Logo.png)}
+body{background:url(bg1.png) #111;color:#eee;text-align:center;font-family: 'Vollkorn', Arial;cursor:default;}
+.centered{margin:0% 50%;transform:translate(-50%, 0%);}
+.noselect{
+	-webkit-user-select: none;       
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+#title{
+	width:500px;
+	text-indent: -999em;
+	height:100px;background:url(Logo.png)
+}
+#namezone{
+	width:550px;
+}
+#firstinput{
+	width:350px;margin:25px;padding:15px;
+	color:#eef;background:rgba(0,0,0,0.5);
+	font-size:30px;font-family:'Vollkorn', Arial;
+	text-align:center;border:0px;border-radius:5px;
+	text-transform: capitalize;
+}
+.button{
+	position:relative;display:block;
+	font-size:20px;border: #334 solid 1px;
+	border-radius:3px;
+	background:#223;width:250;color:#aaa;
+	padding:5px;margin:10px 50%;
+	cursor: pointer;
+}
+.button:hover{
+	background:#334;color:#fff;text-shadow:0px 0px 4px;
+	border: #445 solid 1px;
+}
+.button:active{
+	background:#112;
+}
+input:focus{	outline-color:#334;	}
+
+::-webkit-input-placeholder {
+    opacity:0.3;
+}
+:-moz-placeholder {
+   opacity:0.3;
+}
+::-moz-placeholder {
+   opacity:0.3;
+}
+:-ms-input-placeholder {
+   opacity:0.3;
+}
+::selection {
+  background: rgba(30,70,100,0.5);
+}
+::-moz-selection {
+  background: rgba(30,70,100,0.5);
+}
