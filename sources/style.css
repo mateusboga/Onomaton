@@ -1,1 +1,2 @@
-body{background:#111;color:#eee;}
+body{background:url(bg1.png) #111;color:#eee;text-align:center;font-family: 'Vollkorn', Arial;}
+#title{width:500px;margin:0% 50%;transform:translate(-50%, 0%);height:100px;background:url(Logo.png)}
