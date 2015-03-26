@@ -87,13 +87,13 @@ function createNorseName(n) {
 	var click = new Audio('sources/click.wav');
 	var Text = '';
 	var StartSyll = [
-		'bal','bo','bra','bu','da','del','el','fr','lo','od','njo','þó','þru','ul','vá','hö','eo','jö','heim'
+		'bal','bo','bra','bu','da','del','el','fr','lo','od','njo','tho','thru','ul','va','ho','eo','jo','heim'
 	];
 	var MidSyll = [
 		'ey','rd','ln','dra','fj','ld','rs'
 	];
 	var EndSyll = [
-		'ður','orr','gi','gur','li','ja','jun','yr','lur','la','ki','fn','inn','ur','ir','lr','þus','ótt','heim','seih'
+		'dur','orr','gi','gur','li','ja','jun','yr','lur','la','ki','fn','inn','ur','ir','lr','thus','ott','heim','seih'
 	];
 	for(i=1; i < n; i++) {
 		if(i == 1){ Text += StartSyll[( Math.floor( Math.random() * StartSyll.length ))]; }
