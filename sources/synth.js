@@ -72,7 +72,39 @@ function GreekFilter(oldtext) {
 	newtext = newtext.replace('rr','r');
 	newtext = newtext.replace('ll','l');
 	newtext = newtext.replace('oo','o');
+	newtext = newtext.replace('thth','th');
+	newtext = newtext.replace('dd','d');
 	return newtext;
+}
+//setInterval(function(){ Name = createGreekName(3);R(); },1000)
+
+function RandNord() {
+	Name = createNorseName(3);
+	R();
+}
+
+function createNorseName(n) {
+	var click = new Audio('sources/click.wav');
+	var Text = '';
+	var StartSyll = [
+		'bal','bo','bra','bu','da','del','el','fr','lo','od','njo','þó','þru','ul','vá','hö','eo','jö','heim'
+	];
+	var MidSyll = [
+		'ey','rd','ln','dra','fj','ld','rs'
+	];
+	var EndSyll = [
+		'ður','orr','gi','gur','li','ja','jun','yr','lur','la','ki','fn','inn','ur','ir','lr','þus','ótt','heim','seih'
+	];
+	for(i=1; i < n; i++) {
+		if(i == 1){ Text += StartSyll[( Math.floor( Math.random() * StartSyll.length ))]; }
+		if(i == (n-1)){ Text += EndSyll[( Math.floor( Math.random() * EndSyll.length ))]; }
+		else { Text += MidSyll[( Math.floor( Math.random() * MidSyll.length ))]; }
+	}; 
+	//Text = NorseFilter(Text);
+	click.play(); return Text;
+}
+function NorseFilter(old){
+	return old;
 }
 
 // Others
