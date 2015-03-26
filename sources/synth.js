@@ -4,6 +4,7 @@ var input1 = document.getElementById('firstinput'), Name = '';
 
 function R() {
 	input1.value = Name;
+	console.log(Name);
 }
 
 function RandString() {
@@ -42,19 +43,36 @@ function createGreekName(n) {
 	var click = new Audio('sources/click.wav');
 	var Text = '';
 	var StartSyll = [
-		'arch','al','pal','ga','be','ae','on','aph','eph','xi','ach','ech','ar','he','ze','ch','er'
+		'ae','aph','ap','ar','ath','an','de','dio','ha','he','her','hes','pos','ze','cha','chro','cro','chra','er','hy','psi','coe','hy','ia','mne','o','pho','te','the','as','at','au','cly','per','se'
 	];
 	var MidSyll = [
-		'la','ai','arch','ae','ar','i','ze','o','e','a','ro','m','ik','ph','de','psi','ron','on','r','s'
+		'rod','ei','ol','tem','ch','mi','nys','me','en','psi','cath','an','per','pet','mos','cea','eb','tra','the'
 	];
 	var EndSyll = [
-		'on','os','lon','a','e','es','o','i','ae','ea'
+		'es','mis','os','on','nos','no','na','ra','sis','is','tos','ia','bus','us','lon','ther','er','ke','don','tris','eos','las','ne','ses'
 	];
-	for(i=0; i < n; i++) {
-		if(i == 0){ Text += StartSyll[( Math.floor( Math.random() * StartSyll.length ))]; }
-		if(i > (n-2)){ Text += EndSyll[( Math.floor( Math.random() * EndSyll.length ))]; }
+	for(i=1; i < n; i++) {
+		if(i == 1){ Text += StartSyll[( Math.floor( Math.random() * StartSyll.length ))]; }
+		if(i == (n-1)){ Text += EndSyll[( Math.floor( Math.random() * EndSyll.length ))]; }
 		else { Text += MidSyll[( Math.floor( Math.random() * MidSyll.length ))]; }
-	}; click.play(); return Text;
+	}; 
+	Text = GreekFilter(Text);
+	click.play(); return Text;
+}
+function GreekFilter(oldtext) {
+	var newtext = '';
+	newtext = oldtext;
+	newtext = newtext.replace('ii','i');
+	newtext = newtext.replace('pp','p');
+	newtext = newtext.replace('ee','e');
+	newtext = newtext.replace('nn','n');
+	newtext = newtext.replace('bb','b');
+	newtext = newtext.replace('ss','s');
+	newtext = newtext.replace('tt','t');
+	newtext = newtext.replace('rr','r');
+	newtext = newtext.replace('ll','l');
+	newtext = newtext.replace('oo','o');
+	return newtext;
 }
 
 // Others
