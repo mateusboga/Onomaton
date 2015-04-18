@@ -3,6 +3,16 @@ body{
 	color:#eee;text-align:center;font-family: 'Vollkorn', Arial;
 	cursor:default;
 }
+a:link{
+	color:#29f;text-decoration:none;
+}
+a:link:hover{
+	text-decoration:underline;
+}
+a:visited{
+	color:#17e;
+}
+
 #wrapper{
 	position:absolute;
 	left:0px;right:0px;top:0px;bottom:0px;
@@ -35,6 +45,9 @@ body{
 	font-size:30px;font-family:'Vollkorn', Arial;
 	text-align:center;border:0px;border-radius:5px;
 	text-transform: capitalize;
+}
+#credit{
+	position:absolute;left:10px;bottom:5px;
 }
 .button{
 	position:relative;display:block;
