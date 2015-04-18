@@ -7,8 +7,9 @@ function R() {
 	console.log(Name);
 }
 
+var stringn = 8, namen = 8, greekn = 3, norsen = 2;
 function RandString() {
-	Name = createString(8);
+	Name = createString(stringn);
 	R();
 }
 
@@ -21,7 +22,7 @@ function createString(n) {
 }
 
 function RandSyll() {
-	Name = createName(8);
+	Name = createName(namen);
 	R();
 }
 
@@ -35,18 +36,21 @@ function createName(n) {
 }
 
 function RandGreek() {
-	Name = createGreekName(3);
+	Name = createGreekName(greekn);
 	R();
 }
 
 function createGreekName(n) {
+	// Greek Name Generator BETA 1.0 - Onomaton
+	// Over 17000 possible names with 3 syllables, over 345000 with 4 and over 800 with 2.
+	// Over 362800 possible names!
 	var click = new Audio('sources/click.wav');
 	var Text = '';
 	var StartSyll = [
-		'ae','aph','ap','ar','ath','an','de','dio','ha','he','her','hes','pos','ze','cha','chro','cro','chra','er','hy','psi','coe','hy','ia','mne','o','pho','te','the','as','at','au','cly','per','se'
+		'ae','aph','ap','ar','ath','an','de','dio','ha','he','her','hes','pos','ze','cha','chro','cro','chra','er','hy','psi','coe','hy','ia','mne','o','pho','te','the','as','at','au','cly','per','se','ul','kle'
 	];
 	var MidSyll = [
-		'rod','ei','ol','tem','ch','mi','nys','me','en','psi','cath','an','per','pet','mos','cea','eb','tra','the'
+		'rod','ei','ol','tem','ch','mi','nys','me','en','psi','cath','an','per','pet','mos','cea','eb','tra','the','ys','pto'
 	];
 	var EndSyll = [
 		'es','mis','os','on','nos','no','na','ra','sis','is','tos','ia','bus','us','lon','ther','er','ke','don','tris','eos','las','ne','ses'
@@ -74,12 +78,16 @@ function GreekFilter(oldtext) {
 	newtext = newtext.replace('oo','o');
 	newtext = newtext.replace('thth','th');
 	newtext = newtext.replace('dd','d');
+	newtext = newtext.replace('aa','a');
+	newtext = newtext.replace('mm','m');
+	newtext = newtext.replace('tht','th');
+	newtext = newtext.replace('yy','y');
 	return newtext;
 }
 //setInterval(function(){ Name = createGreekName(3);R(); },1000)
 
 function RandNord() {
-	Name = createNorseName(3);
+	Name = createNorseName(norsen);
 	R();
 }
 

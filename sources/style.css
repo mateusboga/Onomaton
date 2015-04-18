@@ -1,4 +1,18 @@
-body{background:url(bg1.png) #111;color:#eee;text-align:center;font-family: 'Vollkorn', Arial;cursor:default;}
+body{
+	background:url(bg1.png) #111;
+	color:#eee;text-align:center;font-family: 'Vollkorn', Arial;
+	cursor:default;
+}
+#wrapper{
+	position:absolute;
+	left:0px;right:0px;top:0px;bottom:0px;
+}
+#shadow{
+	position:fixed;
+	left:0px;right:0px;top:0px;bottom:0px;
+	box-shadow:0px 0px 100px black inset;
+	pointer-events:none;
+}
 .centered{margin:0% 50%;transform:translate(-50%, 0%);}
 .noselect{
 	-webkit-user-select: none;       
@@ -29,6 +43,7 @@ body{background:url(bg1.png) #111;color:#eee;text-align:center;font-family: 'Vol
 	background:#223;width:250;color:#aaa;
 	padding:5px;margin:10px 50%;
 	cursor: pointer;
+	transition: background 0.2s, color 0.2s;
 }
 .button:hover{
 	background:#334;color:#fff;text-shadow:0px 0px 4px;
