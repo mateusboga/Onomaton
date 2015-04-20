@@ -45,6 +45,14 @@ a:visited{
 	font-size:30px;font-family:'Vollkorn', Arial;
 	text-align:center;border:0px;border-radius:5px;
 	text-transform: capitalize;
+	margin-bottom:80px;
+}
+#Syllab{
+	position:absolute;left:350px;top:100px;font-size:15px;
+}
+#SyllC{
+	width:50px;background:rgba(0,0,0,0);border:0px;color:white;font-weight:bold;
+	font-size:18px;
 }
 #credit{
 	position:absolute;left:10px;bottom:5px;
@@ -59,7 +67,7 @@ a:visited{
 	transition: background 0.2s, color 0.2s;
 }
 .button:hover{
-	background:#334;color:#fff;text-shadow:0px 0px 4px;
+	background:#334;color:#fff;text-shadow:0px 0px 9px rgba(255,255,255,0.5);
 	border: #445 solid 1px;
 }
 .button:active{
