@@ -12,7 +12,8 @@ Currently under development, Onomaton will serve for any kind of name, whether f
 ######Onomaton includes:
 - A random name generator.
 - A random Greek name generator. --- **391000+ possible names!**
-- A random Norse name generator. --- **18000+ possible names!**
+- A random Norse name generator. --- **26000+ possible names!**
+- A random Roman name generator. --- **261000+ possible names!**
 
 ###### Coming soon:
 - A name constructor.
