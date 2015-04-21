@@ -141,13 +141,13 @@ function createNorseName(n) {
 	var click = new Audio('sources/click.wav');
 	var Text = '';
 	var StartSyll = [
-		'bal','bo','bra','bu','da','del','el','fr','lo','od','njo','tho','thru','ul','va','ho','eo','jo','heim'
+		'bal','bo','bra','bu','da','del','el','fur','lo','od','njo','tho','thru','ul','va','ho','eo','jo','heim','bjo'
 	];
 	var MidSyll = [
-		'ey','rd','ln','dra','fj','ld','rs'
+		'ey','rd','ln','dra','fj','ld','rs','rod'
 	];
 	var EndSyll = [
-		'dur','orr','gi','gur','li','ja','jun','yr','lur','la','ki','fn','inn','ur','ir','lr','thus','ott','heim','seih'
+		'dur','orr','gi','gur','li','ja','jun','yr','lur','la','ki','fn','inn','ur','ir','lr','thus','ott','heim','seih','rn'
 	];
 	for(i=1; i < n; i++) {
 		if(i == 1){ Text += StartSyll[( Math.floor( Math.random() * StartSyll.length ))]; }
@@ -159,6 +159,54 @@ function createNorseName(n) {
 }
 function NorseFilter(old){
 	return old;
+}
+
+function RandLatin() {
+	L();
+	Name = createLatinName(sylln);
+	R();
+}
+
+function createLatinName(n) {
+	var click = new Audio('sources/click.wav');
+	var Text = '';
+	var StartSyll = [
+		'ja','ju','mi','sal','cer','tel','bor','ben','pal','lu','ter','lar','qui','ni','di','au','cae','in','mat','pat','mag','ac','ai','an','ar','av','bel','ca','ce','eg','ep','fa','fo','her','ho','in','et'
+	];
+	var MidSyll = [
+		'pi','ner','min','un','rin','ni','an','fer','ti','ri','gus','les','vict','ci','ro','er','on','ic','la','tu','vid'
+	];
+	var EndSyll = [
+		'us','um','er','te','es','va','ta','na','da','ae','ea','ar','tis','is','ra','ia'
+	];
+	for(i=1; i < n; i++) {
+		if(i == 1){ Text += StartSyll[( Math.floor( Math.random() * StartSyll.length ))]; }
+		if(i == (n-1)){ Text += EndSyll[( Math.floor( Math.random() * EndSyll.length ))]; }
+		else { Text += MidSyll[( Math.floor( Math.random() * MidSyll.length ))]; }
+	}; 
+	Text = LatinFilter(Text);
+	click.play(); return Text;
+}
+function LatinFilter(oldtext) {
+	var newtext = '';
+	newtext = oldtext;
+	newtext = newtext.replace('ii','i');
+	newtext = newtext.replace('pp','p');
+	newtext = newtext.replace('ee','e');
+	newtext = newtext.replace('nn','n');
+	newtext = newtext.replace('bb','b');
+	newtext = newtext.replace('ss','s');
+	newtext = newtext.replace('tt','t');
+	newtext = newtext.replace('rr','r');
+	newtext = newtext.replace('ll','l');
+	newtext = newtext.replace('oo','o');
+	newtext = newtext.replace('dd','d');
+	newtext = newtext.replace('aa','a');
+	newtext = newtext.replace('mm','m');
+	newtext = newtext.replace('uu','u');
+	newtext = newtext.replace('tt','t');
+	newtext = newtext.replace('gg','g');
+	return newtext;
 }
 
 function PtFilter(oldtext){
