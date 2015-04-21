@@ -86,17 +86,15 @@ function RandGreek() {
 
 function createGreekName(n) {
 	// Greek Name Generator BETA 1.0 - Onomaton
-	// Over 17000 possible names with 3 syllables, over 345000 with 4 and over 800 with 2.
-	// Over 362800 possible names!
 	var click = new Audio('sources/click.wav');
 	var Text = '';
-	var StartSyll = [
-		'ae','aph','ap','ar','ath','an','de','dio','ha','he','her','hes','pos','ze','cha','chro','cro','chra','er','hy','psi','coe','hy','ia','mne','o','pho','te','the','as','at','au','cly','per','se','ul','kle'
+	StartSyll = [
+		'ae','aph','ap','ar','ath','an','de','dio','ha','he','her','hes','pos','ze','cha','chro','cro','chra','er','hy','psi','coe','hy','ia','mne','o','pho','te','the','as','at','au','cly','per','se','ul','kle','xi'
 	];
-	var MidSyll = [
+	MidSyll = [
 		'rod','ei','ol','tem','ch','mi','nys','me','en','psi','cath','an','per','pet','mos','cea','eb','tra','the','ys','pto'
 	];
-	var EndSyll = [
+	EndSyll = [
 		'es','mis','os','on','nos','no','na','ra','sis','is','tos','ia','bus','us','lon','ther','er','ke','don','tris','eos','las','ne','ses'
 	];
 	for(i=1; i < n; i++) {
@@ -138,15 +136,16 @@ function RandNord() {
 }
 
 function createNorseName(n) {
+	// Norse Name Generator BETA 1.0 - Onomaton
 	var click = new Audio('sources/click.wav');
 	var Text = '';
-	var StartSyll = [
+	StartSyll = [
 		'bal','bo','bra','bu','da','del','el','fur','lo','od','njo','tho','thru','ul','va','ho','eo','jo','heim','bjo'
 	];
-	var MidSyll = [
+	MidSyll = [
 		'ey','rd','ln','dra','fj','ld','rs','rod'
 	];
-	var EndSyll = [
+	EndSyll = [
 		'dur','orr','gi','gur','li','ja','jun','yr','lur','la','ki','fn','inn','ur','ir','lr','thus','ott','heim','seih','rn'
 	];
 	for(i=1; i < n; i++) {
@@ -168,15 +167,16 @@ function RandLatin() {
 }
 
 function createLatinName(n) {
+	// Roman Name Generator BETA 1.0 - Onomaton
 	var click = new Audio('sources/click.wav');
 	var Text = '';
-	var StartSyll = [
-		'ja','ju','mi','sal','cer','tel','bor','ben','pal','lu','ter','lar','qui','ni','di','au','cae','in','mat','pat','mag','ac','ai','an','ar','av','bel','ca','ce','eg','ep','fa','fo','her','ho','in','et'
+	StartSyll = [
+		'ja','ju','mi','sa','cer','te','bor','ben','pal','lu','ter','lar','qui','ni','di','au','cae','in','mat','pat','mag','ac','ai','an','ar','av','be','ca','ce','eg','ep','fa','fo','her','ho','in','et'
 	];
-	var MidSyll = [
+	MidSyll = [
 		'pi','ner','min','un','rin','ni','an','fer','ti','ri','gus','les','vict','ci','ro','er','on','ic','la','tu','vid'
 	];
-	var EndSyll = [
+	EndSyll = [
 		'us','um','er','te','es','va','ta','na','da','ae','ea','ar','tis','is','ra','ia'
 	];
 	for(i=1; i < n; i++) {
