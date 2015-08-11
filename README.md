@@ -10,7 +10,9 @@ Onomaton is a project that hopes to clear all problems about name creation. It i
 Currently under development, Onomaton will serve for any kind of name, whether fictional names, names for products, groups, agendas, projects, companies, characters, even scientific names, and really anything you can think of that doesn't already have a name.
 ## Onomaton's lybrary
 ######Onomaton includes:
-- A random name generator.
+- A random string generator. --- **Any possible string of letters**
+- A random syllabic name generator. --- **Simple sounding vowels and consonants**
+- A random fluent name generator. --- **Superior design with wider range of combinations**
 - A random Greek name generator. --- **391000+ possible names!**
 - A random Norse name generator. --- **26000+ possible names!**
 - A random Roman name generator. --- **261000+ possible names!**
@@ -18,6 +20,3 @@ Currently under development, Onomaton will serve for any kind of name, whether f
 ###### Coming soon:
 - A name constructor.
 - A library of linguistic sheets. --- Many prefixes, suffixes and words including Greek, Latin, Hebrew, Germanic and more!
-
-## Speaking of Names..
-Onomaton might seem like a regular, amateur design, but in fact it is not only a name generator, but a library of phonetics and linguistic expressions and their meanings, helping not only the ones who don't know, but also the ones who want to know more.
