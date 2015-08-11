@@ -13,16 +13,18 @@
 			<div id="title" class="centered">Onomaton</div>
 			<div id="subtitle">all ideas deserve <a style="font-weight:bold;text-decoration:underline;">names</a>.</div>
 			<div id="namezone" class="centered">
-				<input id="firstinput" type="text" placeholder="Name"></input><div id="Syllab">Syllables: <input id="SyllC" max="20" min="2" type="number" value="3"></input></div>
+				<input id="firstinput" type="text" placeholder="Name"></input><div id="Syllab">Syllables: <input id="SyllC" max="20" min="1" type="number" value="2"></input></div>
+				<div id="subtitle"><a style="font-size:20px;">Generate:</a></div>
+				<div class="button centered" onclick="RandComplex()">Random Name (Fluent)</div>
+				<div class="button centered" onclick="RandSyll()">Random Name (Syllabic)</div>
 				<div class="button centered" onclick="RandString()">Random String</div>
-				<div class="button centered" onclick="RandSyll()">Random Name</div>
-				<div class="button centered" onclick="RandGreek()">Random Greek Name<sup style="font-size:13px;color:#f20;text-shadow:0px 0px 5px">BETA</sup></div>
-				<div class="button centered" onclick="RandLatin()">Random Roman Name<sup style="font-size:13px;color:#f20;text-shadow:0px 0px 5px">BETA</sup></div>
+				<div class="button centered" onclick="RandGreek()">Random Greek Name</div>
+				<div class="button centered" onclick="RandLatin()">Random Roman Name</div>
 				<div class="button centered" onclick="RandNord()">Random Norse Name<sup style="font-size:13px;color:#f20;text-shadow:0px 0px 5px">BETA</sup></div>
 			</div>
 			<div id="shadow"></div>
-			<div id="credit">&#169 Mateus - <a href="http://github.com/mateusboga">github.com/mateusboga</a></div>
 		</div>
+		<div id="credit">&#169 Mateus - <a href="http://github.com/mateusboga">github.com/mateusboga</a></div>
 	</body>
 	<script type="text/javascript" src="sources/synth.js" charset="UTF-8"></script>
 </html>

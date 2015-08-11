@@ -3,6 +3,7 @@
 var input1 = document.getElementById('firstinput'), Name = '';
 
 function R() {
+	if( Name == "" ){ Name = "-" };
 	input1.value = Name;
 	console.log(Name);
 }
@@ -11,7 +12,7 @@ function L() {
 }
 
 //var stringn = 8, namen = 8, greekn = 3, norsen = 2;
-var sylln = 3;
+var sylln = 2;
 function RandString() {
 	L();
 	Name = createString(sylln*2);
@@ -32,6 +33,12 @@ function RandSyll() {
 	R();
 }
 
+function RandComplex() {
+	L();
+	Name = createComplexName(sylln);
+	R();
+}
+
 function createName(n) {
 	var click = new Audio('sources/click.wav');
 	var Text = '', Vowels = 'aeiouy', Cons = 'wybcdfghjklmnpqrstvxzaeiou';
@@ -41,6 +48,67 @@ function createName(n) {
 	}; 
 	Text = PronFilter(Text);
 	click.play(); return Text;
+}
+
+function createComplexName(n) {
+	var click = new Audio('sources/click.wav');
+	var Text = '', Vowels = 'aeiou', Cons = 'wybcdfghjklmnpqrstvxz', ConsF = 'wybcdfghklmnprstvxz', Cons2 = 'wybcdfghklmnpqrstvz';
+	for(i=0; i < n; i++) {
+		vowel = ""; firstc = ""; secondc = "";
+		
+		vowel = Vowels.charAt(Math.floor(Math.random()*Vowels.length));
+		_1 = Math.floor(Math.random()*3);
+		if( _1 > 0 ){
+			bool = Math.floor(Math.random()*2);
+			if( bool > 0 ){ firstc = Cons2.charAt(Math.floor(Math.random()*Cons2.length)) }
+		}
+		
+		if( i < n ){
+			secondc = Cons.charAt(Math.floor(Math.random()*Cons.length));
+		}else{
+			bool = Math.floor(Math.random()*3);
+			if( bool > 0 ){ secondc = ConsF.charAt(Math.floor(Math.random()*ConsF.length)); }
+		}
+		
+		Text += (firstc+vowel+secondc);
+	}; 
+	Text = ComplexFilter(Text);
+	click.play(); return Text;
+}
+
+function ComplexFilter(oldtext){
+	var newtext = '';
+	newtext = oldtext;
+	newtext = newtext.replace(/q$/, "c")
+	newtext = newtext.replace('qo','quo');
+	newtext = newtext.replace('qe','que');
+	newtext = newtext.replace('qa','qua');
+	newtext = newtext.replace('qi','qui');
+	//newtext = newtext.replace('yj','ij');
+	newtext = newtext.replace('yy','y');
+	//newtext = newtext.replace('uu','u');
+	//newtext = newtext.replace('ee','e');
+	//newtext = newtext.replace('ii','i');
+	//newtext = newtext.replace('aa','a');
+	//newtext = newtext.replace('iw','yow');
+	//newtext = newtext.replace('iey','ihy');
+	//newtext = newtext.replace('yk','ic');
+	//newtext = newtext.replace('ys','is');
+	//newtext = newtext.replace('oej','ojey');
+	//newtext = newtext.replace('oei','wey');
+	newtext = newtext.replace('uw','ow');
+	newtext = newtext.replace('ieuo','ihewo');
+	newtext = newtext.replace('iaue','ihawe');
+	newtext = newtext.replace('aoyi','auyi');
+	//newtext = newtext.replace('owu','ohu');
+	newtext = newtext.replace('ioae','iohay');
+	//newtext = newtext.replace('jo','yo');
+	//newtext = newtext.replace('uiye','uhiye');
+	//newtext = newtext.replace('yij','yih');
+	newtext = newtext.replace('quq','quoc');
+	//newtext = newtext.replace('ty','try');
+	
+	return newtext;
 }
 
 function PronFilter(oldtext){
@@ -171,13 +239,13 @@ function createLatinName(n) {
 	var click = new Audio('sources/click.wav');
 	var Text = '';
 	StartSyll = [
-		'ja','ju','mi','sa','cer','te','bor','ben','pal','lu','ter','lar','qui','ni','di','au','cae','in','mat','pat','mag','ac','ai','an','ar','av','be','ca','ce','eg','ep','fa','fo','her','ho','in','et'
+		'ja','ju','mi','sa','cer','te','bor','ben','pal','lu','ter','lar','qui','ni','di','au','cae','in','mat','pat','mag','ac','ai','an','ar','av','be','ca','ce','eg','ep','fa','fo','her','ho','in','et','ti','pe'
 	];
 	MidSyll = [
-		'pi','ner','min','un','rin','ni','an','fer','ti','ri','gus','les','vict','ci','ro','er','on','ic','la','tu','vid'
+		'pi','ner','min','un','rin','ni','an','fer','ti','ri','gus','les','vict','ci','ro','er','on','ic','la','tu','vid','be','bon'
 	];
 	EndSyll = [
-		'us','um','er','te','es','va','ta','na','da','ae','ea','ar','tis','is','ra','ia'
+		'us','um','er','te','es','va','ta','na','da','ae','ea','ar','tis','is','ra','ia','tum','dum'
 	];
 	for(i=1; i < n; i++) {
 		if(i == 1){ Text += StartSyll[( Math.floor( Math.random() * StartSyll.length ))]; }
